@@ -8,7 +8,7 @@ const router = Router();
 // Aplica o middleware de autenticação somente nas rotas de produtos
 /* router.use(authMiddleware); */
 
-router.get('/', async (req, res) => {
+router.get('/product', async (req, res) => {
   try {
     const products = await ProductModel.find();
     res.json(products);
